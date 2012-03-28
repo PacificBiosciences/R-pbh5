@@ -46,6 +46,10 @@ getReadLength <- function(cmpH5, idx = seq.int(1, nrow(cmpH5))) {
   alnIndex(cmpH5)[idx, "rEnd"] - alnIndex(cmpH5)[idx, "rStart"] + 1
 }
 
+getAlignedLength <- function(cmpH5, idx = seq.int(1, nrow(cmpH5))) {
+  alnIndex(cmpH5)[idx, "offsetEnd"] - alnIndex(cmpH5)[idx, "offsetBegin"] + 1
+}
+
 getZScore <- function(cmpH5, idx = seq.int(1, nrow(cmpH5))) {
   if (h5DatasetExists(cmpH5, "AlnInfo/ZScore"))
     getH5Dataset(cmpH5, "AlnInfo/ZScore")[idx]
