@@ -282,6 +282,7 @@ setMethod("show", "PacBioCmpH5", function(object) {
   cat("N Alignments:", nrow(alnIndex(object)), "\n")
   cat("N ReadGroups:", nrow(alnGroup(object)), "\n")
   cat("N RefSeqs:",    nrow(refGroup(object)), "\n")
+  cat("N Read Bases:", sum(sum(getReadLength(object))), "\n")
 })
 
 setMethod("summary", "PacBioCmpH5", function(object) {
