@@ -20,4 +20,4 @@ data from:
 + tar xzf $DOWNLOAD_NAME.tar.gz
 + R CMD INSTALL $DOWNLOAD_NAME
 
-Please report problems to jbullard at pacificbiosciences.com.
+
